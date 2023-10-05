@@ -75,7 +75,7 @@ func updateanime(w s.ResponseWriter, r *s.Request) {
 			_ = e.NewDecoder(r.Body).Decode(&anime)
 			anime.ID = params["id"]
 			animes = append(animes, anime)
-			e.NewEncoder(w).Encode(anime)
+			e.NewEncoder(w).Encode(animes)
 			return
 		}
 		
